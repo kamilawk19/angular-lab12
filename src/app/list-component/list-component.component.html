@@ -1,0 +1,11 @@
+<p>list-component</p>
+<ul *ngFor="let item of objs; let i = index">
+  <li>
+    <a routerLink="details/{{ keys[i] }}">
+      {{ item.firstName }} {{ item.familyName }}
+    </a>
+    <button (click)="delete(keys[i])"> DELETE</button>
+  </li>
+</ul>
+
+<button [routerLink]="['add']">Dodaj</button>
